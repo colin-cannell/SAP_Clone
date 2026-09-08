@@ -1,0 +1,2701 @@
+[
+  {
+    "name": "Ant",
+    "tier": 1,
+    "base_attack": 2,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": 0,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Give a random friend +1 Attack and +1 Health."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Give a random friend +2 Attack and +2 Health."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Give a random friend +3 Attack and +3 Health."
+          }
+        ]
+      }
+    ],
+    "summary": "The Ant is a Tier 1 Pet, available in the Turtle Pack. When the Ant faints, it buffs the stats of one random friend. Levelling up the Ant increases the stats given by its ability.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Ant"
+  },
+  {
+    "name": "Beaver",
+    "tier": 1,
+    "base_attack": 3,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": 3,
+    "packs": [
+      "Turtle Pack",
+      "Puppy Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Sell",
+            "effect": "Give two random friends +1 Attack."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Sell",
+            "effect": "Give two random friends +2 Attack."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Sell",
+            "effect": "Give two random friends +3 Attack."
+          }
+        ]
+      }
+    ],
+    "summary": "The Beaver is a Tier 1 Pet, available in the Turtle Pack and the Puppy Pack. When the Beaver is sold, it will give buff the attack of 2 friends. The friends buffed by the Beaver are chosen at random; however, the same friend will never be buffed twice. If there is only one friend left after selling the Beaver, it will buff the remaining friend only once. Levelling up the Beaver increases the amount of attack given to each of the 2 friends.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Beaver"
+  },
+  {
+    "name": "Cricket",
+    "tier": 1,
+    "base_attack": 1,
+    "base_health": 3,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": 17,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon one 1/1 Cricket."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon one 2/2 Cricket."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon one 3/3 Cricket."
+          }
+        ]
+      }
+    ],
+    "summary": "The Cricket is a Tier 1 Pet, available in the Turtle Pack. When the Cricket faints, it summons a weak Zombie Cricket in its place. Levelling up the Cricket increases the stats and level of the summoned Zombie Cricket.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Cricket"
+  },
+  {
+    "name": "Duck",
+    "tier": 1,
+    "base_attack": 2,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": 26,
+    "packs": [
+      "Turtle Pack",
+      "Puppy Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Sell",
+            "effect": "Give shop pets +1 Health."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Sell",
+            "effect": "Give shop pets +2 Health."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Sell",
+            "effect": "Give shop pets +3 Health."
+          }
+        ]
+      }
+    ],
+    "summary": "The Duck is a Tier 1 Pet, available in the Turtle Pack and the Puppy Pack. When sold, it will increase the health of all pets currently in the shop. When levelled up, the amount of health given is increased. This health buff will not apply to future animals if the shop is rolled.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Duck"
+  },
+  {
+    "name": "Fish",
+    "tier": 1,
+    "base_attack": 2,
+    "base_health": 3,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": 32,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Level-up",
+            "effect": "Give two friends +1 Attack and +1 Health."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Level-up",
+            "effect": "Give two friends +2 Attack and +2 Health."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "",
+            "effect": "No ability."
+          }
+        ]
+      }
+    ],
+    "summary": "The Fish is a Tier 1 Pet, available in the Turtle Pack. Upon levelling up the Fish will give 2 random friends a buff to their stats. Levelling up the Fish increases the amount of stats given.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Fish"
+  },
+  {
+    "name": "Horse",
+    "tier": 1,
+    "base_attack": 2,
+    "base_health": 1,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": 39,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Friend summoned",
+            "effect": "Give it +1 Attack until next turn."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Friend summoned",
+            "effect": "Give it +2 Attack until next turn."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Friend summoned",
+            "effect": "Give it +3 Attack until next turn."
+          }
+        ]
+      }
+    ],
+    "summary": "The Horse is a Tier 1 Pet, available in the Turtle Pack. Whenever a friendly pet fills an empty slot, either by buying them or via an ability, Horse will give them a small amount of attack until next turn. Leveling up the Horse increases the amount of attack it gives to summoned friends. Horse has a hidden interaction: It can be merged with Eagle to transform into a 5/5 level 1 Hippogriff.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Horse"
+  },
+  {
+    "name": "Mosquito",
+    "tier": 1,
+    "base_attack": 2,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": 47,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Deal 1 damage to one random enemy."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Deal 1 damage to two random enemies."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Deal 1 damage to three random enemies."
+          }
+        ]
+      }
+    ],
+    "summary": "Mosquito is a Tier 1 Pet, available in the Turtle Pack. At the start of battle, Mosquito will deal 1 damage to a random enemy. Leveling up Mosquito will increase the amount of enemies it deals damage to.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Mosquito"
+  },
+  {
+    "name": "Otter",
+    "tier": 1,
+    "base_attack": 1,
+    "base_health": 4,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": 51,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Buy",
+            "effect": "Give one random friend +1 Health."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Buy",
+            "effect": "Give two random friends +1 Health."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Buy",
+            "effect": "Give three random friends +1 Health."
+          }
+        ]
+      }
+    ],
+    "summary": "The Otter is a Tier 1 Pet, available in the Turtle Pack. When bought, the Otter will increase the stats of a random friend by +1 health. Levelling up the Otter will increase the amount of friends that it gives the +1 health buff to. Like all Buy pets, the Otter's ability will also activate when an Otter from the shop is merged with an existing Otter, which is the only way to activate the Level 2 and Level 3 effects. If there is only one other pet on the team and the Otter's level 2 or 3 ability is triggered it will still only buff the pet for 1 health once and the extra stats will go to waste.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Otter"
+  },
+  {
+    "name": "Pig",
+    "tier": 1,
+    "base_attack": 4,
+    "base_health": 1,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": 59,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Sell",
+            "effect": "Gain +1 Gold."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Sell",
+            "effect": "Gain +2 Gold."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Sell",
+            "effect": "Gain +3 Gold."
+          }
+        ]
+      }
+    ],
+    "summary": "Pig is a Tier 1 Pet, available in the Turtle Pack. When sold, it will give the player 1 extra Gold, on top of its normal sell value. Leveling up Pig increases the amount of gold it gives upon being sold.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Pig"
+  },
+  {
+    "name": "Pigeon",
+    "tier": 1,
+    "base_attack": 3,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": 559,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Sell",
+            "effect": "Stock one free Bread Crumbs."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Sell",
+            "effect": "Stock two free Bread Crumbs."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Sell",
+            "effect": "Stock three free Bread Crumbs."
+          }
+        ]
+      }
+    ],
+    "summary": "The Pigeon is a Tier 1 Pet, available in the Turtle Pack. Selling Pigeon stocks a free Bread Crumbs in the shop, which when bought will give +1 Attack to a pet. Leveling up the Pigeon increases the amount of Bread Crumbs stocked when Pigeon is sold.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Pigeon"
+  },
+  {
+    "name": "Crab",
+    "tier": 2,
+    "base_attack": 4,
+    "base_health": 1,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Gain Health equal to 25% of the most healthy friend."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Gain Health equal to 50% of the most healthy friend."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Gain Health equal to 75% of the most healthy friend."
+          }
+        ]
+      }
+    ],
+    "summary": "The Crab is a Tier 2 Pet, available in the Turtle Pack. At the start of battle the Crab will gain a percentage of health from the healthiest friend. The percentage of health it gain increases as it levels up.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Crab"
+  },
+  {
+    "name": "Flamingo",
+    "tier": 2,
+    "base_attack": 3,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Give the two nearest friends behind +1 Attack and +1 Health."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Give the two nearest friends behind +2 Attack and +2 Health."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Give the two nearest friends behind +3 Attack and +3 Health."
+          }
+        ]
+      }
+    ],
+    "summary": "The Flamingo is a Tier 2 Pet, available in the Turtle Pack. When the Flamingo faints it buffs the stats of the two friends directly behind it. Leveling up the Flamingo will increase the strength of the buffs given. The Flamingo will never buff itself, nor will it buff any friend twice. If there are less than 2 friends behind it when it faints, its ability will be wasted. The Mammoth is a direct upgrade to the Flamingo, targeting all friends with twice the buff amount upon faint.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Flamingo"
+  },
+  {
+    "name": "Hedgehog",
+    "tier": 2,
+    "base_attack": 4,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Deal 2 damage to ALL pets."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Deal 4 damage to ALL pets."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Deal 6 damage to ALL pets."
+          }
+        ]
+      }
+    ],
+    "summary": "Hedgehog is a Tier 2 Pet, available in the Turtle Pack. When Hedgehog faints, it deals damage to ALL pets, regardless of whether they are on the player's or the enemy's team. When leveled up, Hedgehog will deal more damage with its ability.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Hedgehog"
+  },
+  {
+    "name": "Kangaroo",
+    "tier": 2,
+    "base_attack": 2,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Friend ahead attacks",
+            "effect": "Gain +1 Attack and +1 Health."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Friend ahead attacks",
+            "effect": "Gain +2 Attack and +2 Health."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Friend ahead attacks",
+            "effect": "Gain +3 Attack and +3 Health."
+          }
+        ]
+      }
+    ],
+    "summary": "The Kangaroo is a Tier 2 Pet, available in the Turtle Pack. When the friend ahead of the Kangaroo attacks, the Kangaroo gains a buff to its stats. Leveling up the Kangaroo increases the buff it receives each time its ability is triggered.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Kangaroo"
+  },
+  {
+    "name": "Peacock",
+    "tier": 2,
+    "base_attack": 2,
+    "base_health": 5,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Hurt",
+            "effect": "Gain +3 Attack."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Hurt",
+            "effect": "Gain +6 Attack."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Hurt",
+            "effect": "Gain +9 Attack."
+          }
+        ]
+      }
+    ],
+    "summary": "The Peacock is a Tier 2 Pet, available in the Turtle Pack. When the Peacock takes damage, it gains attack. Leveling up the Peacock will increase the amount of attack it gains when hurt.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Peacock"
+  },
+  {
+    "name": "Rat",
+    "tier": 2,
+    "base_attack": 3,
+    "base_health": 6,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon one 1/1 Dirty Rat up front for the opponent."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon two 1/1 Dirty Rats up front for the opponent."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon three 1/1 Dirty Rats up front for the opponent."
+          }
+        ]
+      }
+    ],
+    "summary": "Rat is a Tier 2 Pet, available in Turtle Pack. When Rat faints, it summons a level 1 Dirty Rat at the front of the enemy's team. Leveling up Rat will increase the amount of Dirty Rats summoned. When summoned by Rat, Dirty Rats do not trigger any Summoned abilities. For example: If the enemy has a Horse, it will not give any Attack to Dirty Rats.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Rat"
+  },
+  {
+    "name": "Snail",
+    "tier": 2,
+    "base_attack": 2,
+    "base_health": 3,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "End turn",
+            "effect": "If you lost last battle, give the three nearest friends ahead +1 Attack."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "End turn",
+            "effect": "If you lost last battle, give the three nearest friends ahead +2 Attack."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "End turn",
+            "effect": "If you lost last battle, give the three nearest friends ahead +3 Attack."
+          }
+        ]
+      }
+    ],
+    "summary": "Snail is a Tier 2 Pet, available in the Turtle Pack. At the end of turn, if the player lost the last battle, Snail will give the three nearest friends ahead Attack. Leveling up Snail increases the amount of attack it gives. Snail's ability will only trigger if the player specifically lost the last battle. This is indicated by a sparkling effect on Snail while it's in the shop. If Snail is bought on turn 1, the \"last battle\" will be considered a draw.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Snail"
+  },
+  {
+    "name": "Spider",
+    "tier": 2,
+    "base_attack": 2,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon one level 1 tier 3 pet as a 2/2."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon one level 2 tier 3 pet as a 4/4."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon one level 3 tier 3 pet as a 6/6."
+          }
+        ]
+      }
+    ],
+    "summary": "The Spider is a Tier 2 Pet, available in the Turtle Pack. When the Spider faints, it summons a random tier 3 pet with set stats. Leveling up the Spider will increase the stats and level of the summoned pet.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Spider"
+  },
+  {
+    "name": "Swan",
+    "tier": 2,
+    "base_attack": 1,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Start of turn",
+            "effect": "Gain +1 Gold."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Start of turn",
+            "effect": "Gain +2 Gold."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Start of turn",
+            "effect": "Gain +3 Gold."
+          }
+        ]
+      }
+    ],
+    "summary": "The Swan is a Tier 2 Pet, available in the Turtle Pack. The Swan grants the player extra Gold at the start of every turn. Levelling up the Swan will increase the amount of Gold that it will grant you. It is basically an upgrade for the Pigs .",
+    "source_url": "https://superautopets.wiki.gg/wiki/Swan"
+  },
+  {
+    "name": "Worm",
+    "tier": 2,
+    "base_attack": 1,
+    "base_health": 4,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Start of turn",
+            "effect": "Stock one 2-gold Apple."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Start of turn",
+            "effect": "Stock one 2-gold Better Apple."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Start of turn",
+            "effect": "Stock one 2-gold Best Apple."
+          }
+        ]
+      }
+    ],
+    "summary": "Worm is a Tier 2 Pet, available in the Turtle Pack. At the start of each turn, Worm will add an extra discounted Apple to the right of the food shop that costs 2 gold instead of the usual 3 gold. Leveling up Worm will stock Better Apple that gives +2 Attack and +2 Health, then Best Apple that gives +3 Attack and +3 Health.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Worm"
+  },
+  {
+    "name": "Badger",
+    "tier": 3,
+    "base_attack": 6,
+    "base_health": 3,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Deal 50% attack damage to adjacent pets."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Deal 100% attack damage to adjacent pets."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Deal 150% attack damage to adjacent pets."
+          }
+        ]
+      }
+    ],
+    "summary": "Badger is a Tier 3 Pet, available in the Turtle Pack. When Badger faints, it will deal a percentage of its attack stats to the nearest pets in front of and behind it, regardless of which team they are on. Leveling up Badger increases the percentage of attack its ability will deal as damage.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Badger"
+  },
+  {
+    "name": "Camel",
+    "tier": 3,
+    "base_attack": 3,
+    "base_health": 3,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Hurt",
+            "effect": "Give the nearest friend behind +1 Attack and +2 Health."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Hurt",
+            "effect": "Give the nearest friend behind +2 Attack and +4 Health."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Hurt",
+            "effect": "Give the nearest friend behind +3 Attack and +6 Health."
+          }
+        ]
+      }
+    ],
+    "summary": "The Camel is a Tier 3 Pet, available in the Turtle Pack. When the Camel is hurt, it gives a buff to the nearest friend behind it. Levelling up the Camel increases the size of the buff given.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Camel"
+  },
+  {
+    "name": "Dodo",
+    "tier": 3,
+    "base_attack": 4,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Give 50% of attack to nearest friend ahead."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Give 100% of attack to nearest friend ahead."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Give 150% of attack to nearest friend ahead."
+          }
+        ]
+      }
+    ],
+    "summary": "The Dodo is a Tier 3 Pet, available in the Turtle Pack. At the start of each battle, the Dodo gives the nearest friend in front of it a buff to its attack, equal to a percentage of the Dodo's attack. The percentage of the Dodo's own attack given is increased when the Dodo is leveled up.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Dodo"
+  },
+  {
+    "name": "Dog",
+    "tier": 3,
+    "base_attack": 3,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Friend summoned",
+            "effect": "Gain +2 Attack and +1 Health until end of battle."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Friend summoned",
+            "effect": "Gain +4 Attack and +2 Health until end of battle."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Friend summoned",
+            "effect": "Gain +6 Attack and +3 Health health until end of battle."
+          }
+        ]
+      }
+    ],
+    "summary": "The Dog is a Tier 3 Pet, available in the Turtle Pack. Whenever a friend is summoned, the Dog will gain a stat buff. However, the stats will only last until end of battle. Levelling up the Dog will increase the amount of stats gained for each friend summoned.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Dog"
+  },
+  {
+    "name": "Dolphin",
+    "tier": 3,
+    "base_attack": 4,
+    "base_health": 3,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Deal 4 damage to the lowest health enemy."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Deal 4 damage to the lowest health enemy. Triggers 2 times."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Deal 4 damage to the lowest health enemy. Triggers 3 times."
+          }
+        ]
+      }
+    ],
+    "summary": "The Dolphin is a Tier 3 Pet, available in the Turtle Pack . At the start of battle, the Dolphin will deal 4 damage to the enemy with the lowest health. Levelling up the Dolphin will increase the amount of times its ability triggers.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Dolphin"
+  },
+  {
+    "name": "Elephant",
+    "tier": 3,
+    "base_attack": 3,
+    "base_health": 7,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "After attack",
+            "effect": "Deal 1 damage to the nearest friend behind."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "After attack",
+            "effect": "Deal 1 damage to the nearest friend behind. Triggers 2 times."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "After attack",
+            "effect": "Deal 1 damage to the nearest friend behind. Triggers 3 times."
+          }
+        ]
+      }
+    ],
+    "summary": "Elephant is a Tier 3 Pet, available in the Turtle Pack. After Elephant attacks, it will deal 1 damage to the nearest friend behind it. Leveling up Elephant will increase the amount of times it damages the friend behind it after attacking.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Elephant"
+  },
+  {
+    "name": "Giraffe",
+    "tier": 3,
+    "base_attack": 1,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Start of turn",
+            "effect": "Give the nearest friend ahead +1 Attack and +1 Health."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Start of turn",
+            "effect": "Give the nearest two friends ahead +1 Attack and +1 Health."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Start of turn",
+            "effect": "Give the nearest three friends ahead +1 Attack and +1 Health."
+          }
+        ]
+      }
+    ],
+    "summary": "The Giraffe is a Tier 3 Pet, available in the Turtle Pack . At the start of every turn, the Giraffe will buff the stats of the friend(s) ahead of it. Levelling up the Giraffe will increase the amount of friends it can target with its ability.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Giraffe"
+  },
+  {
+    "name": "Ox",
+    "tier": 3,
+    "base_attack": 1,
+    "base_health": 3,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Friend ahead faints",
+            "effect": "Gain Melon perk and +1 Attack. Works 1 time per turn."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Friend ahead faints",
+            "effect": "Gain Melon perk and +1 Attack. Works 2 times per turn."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Friend ahead faints",
+            "effect": "Gain Melon perk and +1 Attack. Works 3 times per turn."
+          }
+        ]
+      }
+    ],
+    "summary": "The Ox is a Tier 3 Pet, available in the Turtle Pack. When the nearest friend ahead of Ox faints, Ox will gain Melon Food perk and +1 attack. Leveling up Ox will increase the amount of times its ability can trigger per turn.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Ox"
+  },
+  {
+    "name": "Rabbit",
+    "tier": 3,
+    "base_attack": 1,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Friendly ate food",
+            "effect": "Give them +1 Health. Works 3 times per turn."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Friendly ate food",
+            "effect": "Give them +2 Health. Works 3 times per turn."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Friendly ate food",
+            "effect": "Give them +3 Health. Works 3 times per turn."
+          }
+        ]
+      }
+    ],
+    "summary": "Rabbit is a Tier 3 Pet, available in the Turtle Pack. When a friendly pet eats any Food, including Rabbit itself, Rabbit will give that pet additional health, up to three times per turn. Leveling up Rabbit increases the amount of health given.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Rabbit"
+  },
+  {
+    "name": "Sheep",
+    "tier": 3,
+    "base_attack": 2,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon two 2/2 Rams."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon two 4/4 Rams."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon two 6/6 Rams."
+          }
+        ]
+      }
+    ],
+    "summary": "The Sheep is a Tier 3 Pet, available in the Turtle Pack. When the Sheep faints, it summons two Rams with the same level as the Sheep. Levelling up the Sheep increases the stats of the summoned Rams.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Sheep"
+  },
+  {
+    "name": "Bison",
+    "tier": 4,
+    "base_attack": 4,
+    "base_health": 4,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "End turn",
+            "effect": "If this has a level 3 friend, gain +2 Attack and +2 Health. Works for 1 Bison."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "End turn",
+            "effect": "If this has a level 3 friend, gain +4 Attack and +4 Health. Works for 1 Bison."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "End turn",
+            "effect": "If this has a level 3 friend, gain +6 Attack and +6 Health. Works for 1 Bison."
+          }
+        ]
+      }
+    ],
+    "summary": "The Bison is a Tier 4 Pet, available in the Turtle Pack. At the end of turn, the Bison gains a boost to its stats, but only if there is at least one other level 3 pet on the team. Leveling up the Bison will increase the amount of stats it gains. A level 3 Bison will not scale itself.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Bison"
+  },
+  {
+    "name": "Blowfish",
+    "tier": 4,
+    "base_attack": 3,
+    "base_health": 6,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Hurt",
+            "effect": "Deal 3 damage to one random enemy."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Hurt",
+            "effect": "Deal 6 damage to one random enemy."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Hurt",
+            "effect": "Deal 9 damage to one random enemy."
+          }
+        ]
+      }
+    ],
+    "summary": "The Blowfish is a Tier 4 Pet, available in the Turtle Pack. When the Blowfish takes damage, it will damage a random enemy. Levelling up the Blowfish increases the amount of damage dealt when hurt.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Blowfish"
+  },
+  {
+    "name": "Deer",
+    "tier": 4,
+    "base_attack": 2,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon one 5/3 Bus with Chili."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon one 10/6 Bus with Chili."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon one 15/9 Bus with Chili."
+          }
+        ]
+      }
+    ],
+    "summary": "The Deer is a Tier 4 Pet, available in the Turtle Pack. When the Deer faints, it summons a Bus with Chili. Levelling up the Deer increases the level and stats of the summoned Bus.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Deer"
+  },
+  {
+    "name": "Hippo",
+    "tier": 4,
+    "base_attack": 4,
+    "base_health": 7,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Knock out",
+            "effect": "Gain +3 Attack and +3 Health. Works 3 times per battle."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Knock out",
+            "effect": "Gain +6 Attack and +6 Health. Works 3 times per battle."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Knock out",
+            "effect": "Gain +9 Attack and +9 Health. Works 3 times per battle."
+          }
+        ]
+      }
+    ],
+    "summary": "The Hippo is a Tier 4 Pet, available in the Turtle Pack. Whenever Hippo knocks out an enemy, it gains a hefty amount of attack and health, up to 3 times per battle. Leveling up the Hippo will increase the amount of stats it gains upon a successful knock out.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Hippo"
+  },
+  {
+    "name": "Parrot",
+    "tier": 4,
+    "base_attack": 4,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "End turn",
+            "effect": "Copy ability from the nearest pet ahead as level 1 until next turn."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "End turn",
+            "effect": "Copy ability from the nearest pet ahead as level 2 until next turn."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "End turn",
+            "effect": "Copy ability from the nearest pet ahead as level 3 until next turn."
+          }
+        ]
+      }
+    ],
+    "summary": "The Parrot is a Tier 4 Pet, available in the Turtle Pack. At the end of turn, Parrot copies the ability from the nearest friend ahead and reverts back to its original ability when the battle ends. The level of the ability copied is the same as the Parrot's level, regardless of the level of the friend it copied from. Due to being an End turn ability, copying another End turn pet will not trigger Parrot again. For example, copying a Bison won't make the Parrot buff itself.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Parrot"
+  },
+  {
+    "name": "Penguin",
+    "tier": 4,
+    "base_attack": 2,
+    "base_health": 3,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Start of turn",
+            "effect": "Give two level 2 and level 3 friends +1 Attack and +1 Health."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Start of turn",
+            "effect": "Give two level 2 and level 3 friends +2 Attack and +2 Health."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Start of turn",
+            "effect": "Give two level 2 and level 3 friends +3 Attack and +3 Health."
+          }
+        ]
+      }
+    ],
+    "summary": "The Penguin is a Tier 4 Pet, available in the Turtle Pack. At the start of every turn, the Penguin will give a stat buff to two random level 2 or 3 friends. Leveling up the Penguin will increase the amount of stats that are given.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Penguin"
+  },
+  {
+    "name": "Skunk",
+    "tier": 4,
+    "base_attack": 3,
+    "base_health": 5,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Reduce the highest health enemy by 33% Health."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Reduce the highest health enemy by 66% Health."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Reduce the highest health enemy by 99% Health."
+          }
+        ]
+      }
+    ],
+    "summary": "The Skunk is a Tier 4 Pet, available in the Turtle Pack. At the start of battle, the Skunk will reduce the health of the highest health enemy by a percentage of its total health, rounded up. Leveling up the Skunk will increase the percentage number that the enemy's health is reduced by.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Skunk"
+  },
+  {
+    "name": "Squirrel",
+    "tier": 4,
+    "base_attack": 2,
+    "base_health": 5,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Start of turn",
+            "effect": "Discount all shop food by 1 Gold."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Start of turn",
+            "effect": "Discount all shop food by 2 Gold."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Start of turn",
+            "effect": "Discount all shop food by 3 Gold."
+          }
+        ]
+      }
+    ],
+    "summary": "The Squirrel is a Tier 4 Pet, available in the Turtle Pack. At the start of each turn, Squirrel will reduce the Gold cost of all Foods that are currently in the shop. Leveling up the Squirrel will further reduce the costs of the foods.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Squirrel"
+  },
+  {
+    "name": "Turtle",
+    "tier": 4,
+    "base_attack": 2,
+    "base_health": 5,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Give Melon perk to the nearest friend behind."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Give Melon perk to the two nearest friends behind."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Give Melon perk to the three nearest friends behind."
+          }
+        ]
+      }
+    ],
+    "summary": "The Turtle is a Tier 4 Pet, available in the Turtle Pack. When Turtle faints, it gives the nearest friend behind it Melon perk, overriding other Food Perk or Ailment they had previously. When leveled up, Turtle will give Melon perk to more friends behind.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Turtle"
+  },
+  {
+    "name": "Whale",
+    "tier": 4,
+    "base_attack": 3,
+    "base_health": 7,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Swallow the nearest friend ahead and release it as level 1 on faint."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Swallow the nearest friend ahead and release it as level 2 on faint."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Swallow the nearest friend ahead and release it as level 3 on faint."
+          }
+        ]
+      }
+    ],
+    "summary": "The Whale is a Tier 4 Pet, available in the Turtle Pack. At the Start of battle, Whale will swallow (knock out) the nearest friend ahead. Then when Whale faints, it will summon that friend at level 1, with identical stats as before it was swallowed, but without any perks. Leveling up the Whale will increase the level of the summoned friend. Summoned friends are considered \"new\" pets, with no memory of their old selves before being swallowed. For example if a Parrot was swallowed, it will not keep the copied abilities when summoned. Whale is not considered a Faint pet, and does not synergize with pets that call for Faint abilities.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Whale"
+  },
+  {
+    "name": "Armadillo",
+    "tier": 5,
+    "base_attack": 4,
+    "base_health": 8,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Give ALL pets +8 Health."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Give ALL pets +16 Health."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Give ALL pets +24 Health."
+          }
+        ]
+      }
+    ],
+    "summary": "The Armadillo is a Tier 5 pet, available in the Turtle Pack. At the start of battle, the Armadillo will give a health buff to its friends and enemies, including itself. Leveling up the Armadillo increases the amount of health it gives.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Armadillo"
+  },
+  {
+    "name": "Cow",
+    "tier": 5,
+    "base_attack": 4,
+    "base_health": 6,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Buy",
+            "effect": "Replace shop food with two free Milk."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Buy",
+            "effect": "Replace shop food with two free Better Milk."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Buy",
+            "effect": "Replace shop food with two free Best Milk."
+          }
+        ]
+      }
+    ],
+    "summary": "The Cow is a Tier 5 Pet, available in the Turtle Pack. When Cow is bought, it removes all foods from the shop and adds 2 free Milk that each gives +1 Attack and +2 Health. Leveling up the Cow will spawn Better Milk and then Best Milk, with increasingly improved stat buffs. Cow has an additional hidden ability: When given Chocolate, it will spawn 2 free Chocolate Milk that only gives +1 Attack and no health. This ability also improves upon leveling up and spawns Better Chocolate Milk and Best Chocolate Milk.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Cow"
+  },
+  {
+    "name": "Crocodile",
+    "tier": 5,
+    "base_attack": 8,
+    "base_health": 4,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Deal 8 damage to the last enemy."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Deal 8 damage to the last enemy. Triggers 2 times."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Deal 8 damage to the last enemy. Triggers 3 times."
+          }
+        ]
+      }
+    ],
+    "summary": "The Crocodile is a Tier 5 Pet, available in the Turtle Pack. At the start of each battle, the Crocodile deals 8 damage to the Pet at the back of the enemy team. Levelling up the Crocodile will increase the amount of times it deals 8 damage to the backmost enemy pet.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Crocodile"
+  },
+  {
+    "name": "Hippogriff",
+    "tier": 5,
+    "base_attack": 5,
+    "base_health": 5,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": true,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon one 5/5 level 1 pet from the next shop tier."
+          },
+          {
+            "trigger": "Friend summoned",
+            "effect": "Give it +1 Attack until next turn."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon one 10/10 level 2 pet from the next shop tier."
+          },
+          {
+            "trigger": "Friend summoned",
+            "effect": "Give it +2 Attack until next turn."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon one 15/15 level 3 pet from the next shop tier."
+          },
+          {
+            "trigger": "Friend summoned",
+            "effect": "Give it +3 Attack until next turn."
+          }
+        ]
+      }
+    ],
+    "summary": "The Hippogriff is a Tier 5 secret Pet, It is obtained from combining a Horse and an Eagle. It combines the abbility of the two pets into one.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Hippogriff"
+  },
+  {
+    "name": "Monkey",
+    "tier": 5,
+    "base_attack": 1,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "End turn",
+            "effect": "Give front-most friendly pet +2 Attack and +2 Health."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "End turn",
+            "effect": "Give front-most friendly pet +4 Attack and +4 Health."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "End turn",
+            "effect": "Give front-most friendly pet +6 Attack and +6 Health."
+          }
+        ]
+      }
+    ],
+    "summary": "The Monkey is a Tier 5 Pet, available in the Turtle Pack. At the end of turn, the Monkey will provide a big stat buff to the front-most friendly pet. Leveling up the Monkey will increase the amount of stats it gives.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Monkey"
+  },
+  {
+    "name": "Rhino",
+    "tier": 5,
+    "base_attack": 6,
+    "base_health": 7,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Knock out",
+            "effect": "Deal 4 damage to the first enemy. Double against Tier 1 Pets."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Knock out",
+            "effect": "Deal 8 damage to the first enemy. Double against Tier 1 Pets."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Knock out",
+            "effect": "Deal 12 damagee to the first enemy. Double against Tier 1 Pets."
+          }
+        ]
+      }
+    ],
+    "summary": "The Rhino is a Tier 5 Pet, available in the Turtle Pack. When the Rhino Knocks out an opponent, the Rhino will deal damage to the first enemy (dealing double damage to Tier 1 Pets). If an enemy is knocked out by the Rhino's ability, the Rhino's ability will trigger again. Levelling up the Rhino will increase the amount of damage its ability deals.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Rhino"
+  },
+  {
+    "name": "Rooster",
+    "tier": 5,
+    "base_attack": 6,
+    "base_health": 4,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon one Chick with 1 Health and 50% Attack of this."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon two Chicks with 1 Health and 50% Attack of this."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Summon three Chicks with 1 Health and 50% Attack of this."
+          }
+        ]
+      }
+    ],
+    "summary": "The Rooster is a Tier 5 Pet, available in the Turtle Pack. When the Rooster faints, it summons a Chick with the same level as the Rooster, 1 Health and half the Attack that the Rooster had when it fainted. Levelling up the Rooster increases the amount of Chicks summoned.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Rooster"
+  },
+  {
+    "name": "Scorpion",
+    "tier": 5,
+    "base_attack": 1,
+    "base_health": 3,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Summoned",
+            "effect": "Gain Peanut perk."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Summoned",
+            "effect": "Gain Peanut perk."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Summoned",
+            "effect": "Gain Peanut perk."
+          }
+        ]
+      }
+    ],
+    "summary": "The Scorpion is a Tier 5 Pet, available in the Turtle Pack. When summoned, it will gain Peanut perk, which instantly knocks out any enemy that's hurt by Scorpion. Scorpion's ability does not change on level up.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Scorpion"
+  },
+  {
+    "name": "Seal",
+    "tier": 5,
+    "base_attack": 3,
+    "base_health": 8,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Eats food",
+            "effect": "Give three random friends +1 Attack."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Eats food",
+            "effect": "Give three random friends +2 Attack."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Eats food",
+            "effect": "Give three random friends +3 Attack."
+          }
+        ]
+      }
+    ],
+    "summary": "The Seal is a Tier 5 Pet, available in the Turtle Pack. When the Seal eats Food, it buffs the stats of two random friends. Levelling up the Seal will increase the amount of stats the two random friends will receive.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Seal"
+  },
+  {
+    "name": "Shark",
+    "tier": 5,
+    "base_attack": 2,
+    "base_health": 2,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Friend faints",
+            "effect": "Gain +2 Attack and +2 Health."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Friend faints",
+            "effect": "Gain +4 Attack and +4 Health."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Friend faints",
+            "effect": "Gain +6 Attack and +6 Health."
+          }
+        ]
+      }
+    ],
+    "summary": "The Shark is a Tier 5 Pet, available in the Turtle Pack. Each time one of its friends faints, the Shark gains a moderate amount of stats. Leveling up the Shark will increase the amount of stats it gains.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Shark"
+  },
+  {
+    "name": "Turkey",
+    "tier": 5,
+    "base_attack": 3,
+    "base_health": 4,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Friend summoned",
+            "effect": "Give it +3 Attack and +1 Health."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Friend summoned",
+            "effect": "Give it +6 Attack and +2 Health."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Friend summoned",
+            "effect": "Give it +9 Attack and +3 Health."
+          }
+        ]
+      }
+    ],
+    "summary": "The Turkey is a Tier 5 Pet, available in the Turtle Pack. When a friend is summoned, the Turkey gives it a buff to its stats. Leveling up the Turkey increases the amount of stats it gives to the summoned friends.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Turkey"
+  },
+  {
+    "name": "Boar",
+    "tier": 6,
+    "base_attack": 10,
+    "base_health": 6,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Before attack",
+            "effect": "Gain +4 attack and +2 health."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Before attack",
+            "effect": "Gain +8 attack and +4 health."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Before attack",
+            "effect": "Gain +12 attack and +6 health."
+          }
+        ]
+      }
+    ],
+    "summary": "The Boar is a Tier 6 Pet, available in the Turtle Pack. Before every attack, the Boar will gain a buff to its stats. Leveling up the Boar will increase the size of the buff. The stats the Boar gains through its ability are not permanent, and are not retained outside of battle.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Boar"
+  },
+  {
+    "name": "Cat",
+    "tier": 6,
+    "base_attack": 4,
+    "base_health": 5,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "",
+            "effect": "Shop food gives two times Attack and Health. Works 2 times per turn."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "",
+            "effect": "Shop food gives three times Attack and Health. Works 2 times per turn."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "",
+            "effect": "Shop food gives four times Attack and Health. Works 2 times per turn."
+          }
+        ]
+      }
+    ],
+    "summary": "Cat is a Tier 6 Pet, available in Turtle Pack. When Cat is on the team, stat effects from Food such as Pear and Sushi will be multiplied up to two times per turn. This multiplication amount will increase when Cat is leveled up. Each level 1 Cat will increase stat effects by 100%, level 2 by 200%, and level 3 by 300%. For example, if there are a level 1 Cat and a level 3 Cat on the team, stat effects will be increased by 400%, and buying an Apple to one pet will give it 1 + 1*400% = +5 attack and +5 health. Cat will also affect foods that decrease stats such as Broccoli. With one level 1 Cat, buying a Broccoli will give -2 attack and +6 health. Cat does not affect Chocolate and food perks. For example, it will not increase the extra damage granted from a Meat Bone food perk.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Cat"
+  },
+  {
+    "name": "Dragon",
+    "tier": 6,
+    "base_attack": 3,
+    "base_health": 8,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack",
+      "Puppy Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Tier 1 friend bought",
+            "effect": "Give friends +1 Attack and +1 Health. Works 4 times per turn."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Tier 1 friend bought",
+            "effect": "Give friends +2 Attack and +2 Health. Works 4 times per turn."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Tier 1 friend bought",
+            "effect": "Give friends +3 Attack and +3 Health. Works 4 times per turn."
+          }
+        ]
+      }
+    ],
+    "summary": "Dragon is a Tier 6 Pet, available in Turtle Pack and Puppy Pack. Every time a Tier 1 friend is bought, Dragon gives stats to all of its friends, up to 4 times per turn. Leveling up Dragon will increase the amount of stats it gives.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Dragon"
+  },
+  {
+    "name": "Fly",
+    "tier": 6,
+    "base_attack": 4,
+    "base_health": 4,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Friend faints",
+            "effect": "Summon one 4/4 fly in its place. Works 3 times per turn."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Friend faints",
+            "effect": "Summon one 8/8 fly in its place. Works 3 times per turn."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Friend faints",
+            "effect": "Summon one 12/12 fly in its place. Works 3 times per turn."
+          }
+        ]
+      }
+    ],
+    "summary": "The Fly is a Tier 6 Pet, available in the Turtle Pack. When a friend faints, it will summon a Zombie Fly where that pet fainted. This ability can only activate 3 times per turn. Levelling up the Fly increases the stats and level of the summoned Zombie Fly Fly's ability will not trigger until there are spaces for the Zombie Flies to spawn in. When used with other Faint abilities such as Rooster or Deer, it will \"wait\" until the tokens have been cleared before summoning Zombie Flies. When a Zombie Fly faints, it will not trigger Fly's ability.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Fly"
+  },
+  {
+    "name": "Gorilla",
+    "tier": 6,
+    "base_attack": 7,
+    "base_health": 10,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Hurt",
+            "effect": "Gain Coconut. Works 1 times per turn."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Hurt",
+            "effect": "Gain Coconut. Works 2 times per turn."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Hurt",
+            "effect": "Gain Coconut. Works 3 times per turn."
+          }
+        ]
+      }
+    ],
+    "summary": "The Gorilla is a Tier 6 Pet, available in the Turtle Pack. When the Gorilla is hurt, it will gain the Coconut perk, which completely blocks a single instance of damage. However, this ability only triggers a limited number of times per battle. Levelling up the Gorilla increases the amount of times the Coconut perk can be gained.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Gorilla"
+  },
+  {
+    "name": "Leopard",
+    "tier": 6,
+    "base_attack": 10,
+    "base_health": 4,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Deal 50% attack damage to one random enemy."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Deal 50% attack damage to two random enemies."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Start of battle",
+            "effect": "Deal 50% attack damage to three random enemies."
+          }
+        ]
+      }
+    ],
+    "summary": "The Leopard is a Tier 6 Pet, available in the Turtle Pack. At the start of battle, the Leopard will deal damage to a random enemy, equal to 50% of the Leopard's current Attack. Leveling up the Leopard will increase the amount of random enemies it will hit with its ability.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Leopard"
+  },
+  {
+    "name": "Mammoth",
+    "tier": 6,
+    "base_attack": 4,
+    "base_health": 12,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Give all friends +2 Attack and +2 Health."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Give all friends +4 Attack and +4 Health."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Faint",
+            "effect": "Give all friends +6 Attack and +6 Health."
+          }
+        ]
+      }
+    ],
+    "summary": "The Mammoth is a Tier 6 Pet in the Turtle Pack. When the Mammoth faints, it gives all of its friends an increased stat boost. Levelling up the Mammoth will increase the stat boost it provides to all friends.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Mammoth"
+  },
+  {
+    "name": "Snake",
+    "tier": 6,
+    "base_attack": 8,
+    "base_health": 3,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Friend ahead attacks",
+            "effect": "Deal 5 damage to one random enemy. Works 5 times per turn."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Friend ahead attacks",
+            "effect": "Deal 10 damage to one random enemy. Works 5 times per turn."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Friend ahead attacks",
+            "effect": "Deal 15 damage to one random enemy. Works 5 times per turn."
+          }
+        ]
+      }
+    ],
+    "summary": "The Snake is a Tier 6 Pet, available in the Turtle Pack. When the nearest friend ahead of the Snake attacks, it will damage a random enemy. Leveling up the Snake will increase the amount of damage it deals.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Snake"
+  },
+  {
+    "name": "Tiger",
+    "tier": 6,
+    "base_attack": 6,
+    "base_health": 4,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "",
+            "effect": "The friend ahead repeats their ability in battle as if they were level 1."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "",
+            "effect": "The friend ahead repeats their ability in battle as if they were level 2."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "",
+            "effect": "The friend ahead repeats their ability in battle as if they were level 3."
+          }
+        ]
+      }
+    ],
+    "summary": "The Tiger is a Tier 6 Pet, available in the Turtle Pack. While in battle, whenever the nearest pet ahead of the Tiger triggers their ability, they will immediately trigger it again but this time at the same level as the Tiger. That bad boy works with bold texts, say, Hurt, Faint, Friend summoned, yeah you know the deal. It doesn't work with End Turn or Start of turn abilities like Giraffe,Monkey, or, well, another Tiger. Friends repeating their abilities won't deplete additional triggers. For example: Each time a friend faints, Fly would summon 2 Zombie Flies but only lose 1 trigger.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Tiger"
+  },
+  {
+    "name": "Wolverine",
+    "tier": 6,
+    "base_attack": 5,
+    "base_health": 7,
+    "attack_cap": 50,
+    "health_cap": 50,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "secret_or_fusion": false,
+    "levels": [
+      {
+        "level": 1,
+        "abilities": [
+          {
+            "trigger": "Four friends hurt",
+            "effect": "Remove 3 Health from all enemies."
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "abilities": [
+          {
+            "trigger": "Four friends hurt",
+            "effect": "Remove 6 Health from all enemies."
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "abilities": [
+          {
+            "trigger": "Four friends hurt",
+            "effect": "Remove 9 Health from all enemies."
+          }
+        ]
+      }
+    ],
+    "summary": "Wolverine is a Tier 6 Pet, available in the Turtle Pack. After every 4 times any of its friends are hurt, Wolverine removes some health from all enemies. Leveling up Wolverine increases the amount of health it removes.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Wolverine"
+  }
+]

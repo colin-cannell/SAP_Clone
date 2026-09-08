@@ -1,0 +1,231 @@
+[
+  {
+    "name": "Apple",
+    "tier": 1,
+    "gold_cost": 3,
+    "gold_cost_note": null,
+    "wiki_id": 0,
+    "packs": [
+      "Turtle Pack",
+      "Puppy Pack",
+      "Golden Pack"
+    ],
+    "effect": "Give one pet +1 Attack and +1 Health.",
+    "summary": "The Apple is a Tier 1 Food, available in the Turtle Pack, the Puppy Pack and the Golden Pack. When a pet is fed an Apple, it receives +1 attack and +1 health. The Pear, Lasagna and Chicken Leg are generally considered to be direct upgrades to it. The Mouse and Worm will stock an Apple when sold/at the start of turn, at level 2 they will stock a Better Apple and at level 3 they will stock a Best Apple that give +2/+2 and +3/+3 respectively.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Apple"
+  },
+  {
+    "name": "Honey",
+    "tier": 1,
+    "gold_cost": 3,
+    "gold_cost_note": null,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack",
+      "Puppy Pack"
+    ],
+    "effect": "Give one pet the Honey perk. Summon one 1/1 Bee after fainting.",
+    "summary": "The Honey is a Tier 1 Food, available in theTurtle Pack. Feeding a pet Honey will give it the Honey perk. When a pet with Honey perk faints, it summons a level 1 Bee in its place.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Honey"
+  },
+  {
+    "name": "Cupcake",
+    "tier": 2,
+    "gold_cost": 3,
+    "gold_cost_note": null,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "effect": "Give one pet +3 Attack and +3 Health until end of battle.",
+    "summary": "The Cupcake is a Tier 2 Food. When a pet is fed a Cupcake, it gets +3/+3 until the end of battle.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Cupcake"
+  },
+  {
+    "name": "Meat Bone",
+    "tier": 2,
+    "gold_cost": 3,
+    "gold_cost_note": null,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "effect": "Give one pet the Meat Bone perk. Attack with +3 damage.",
+    "summary": "The Meat Bone is a Tier 2 Food, available in the Turtle Pack. Feeding a pet a Meat Bone will give them the Meat Bone perk. A pet with the Meat Bone perk attacks with +3 extra damage. This attack bonus does not affect abilities that are dependent on attack: Like Dodo or Leopard.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Meat_Bone"
+  },
+  {
+    "name": "Sleeping Pill",
+    "tier": 2,
+    "gold_cost": 1,
+    "gold_cost_note": "overridden from default 3g (source text says costs 1 gold)",
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack",
+      "Puppy Pack"
+    ],
+    "effect": "Make one pet faint. Always on sale!",
+    "summary": "The Sleeping Pill is a Tier 2 Food, available in the Turtle Pack and the Puppy Pack. When a pet is fed a Sleeping Pill, they're knocked out and are permanently removed from the team. However, this will also activate their Faint abilities. Sleeping Pill costs 1 gold, instead of the usual 3 for all other Foods. Sleeping Pill does not trigger Eats food abilities.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Sleeping_Pill"
+  },
+  {
+    "name": "Garlic",
+    "tier": 3,
+    "gold_cost": 3,
+    "gold_cost_note": null,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "effect": "Give one pet the Garlic perk. Take 2 less damage. It can't be reduced to less than 2.",
+    "summary": "The Garlic is a Tier 3 Food, available in the Turtle Pack. Feeding a pet Garlic will give it the Garlic perk. A pet with Garlic perk will take 2 less damage from all sources, although damage can't be reduced below 2.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Garlic"
+  },
+  {
+    "name": "Salad Bowl",
+    "tier": 3,
+    "gold_cost": 3,
+    "gold_cost_note": null,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "effect": "Give two random pets +1 Attack and +1 Health.",
+    "summary": "The Salad Bowl is a Tier 3 Food, available in the Turtle Pack. Buying a Salad Bowl gives 2 random pets +1/+1. The Sushi or the Pizza could be considered direct upgrades to the Salad Bowl.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Salad_Bowl"
+  },
+  {
+    "name": "Bread",
+    "tier": 4,
+    "gold_cost": 3,
+    "gold_cost_note": null,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "effect": "Give one pet the Bread perk. End turn: Gain +7 Health until next turn",
+    "summary": "Bread is a Tier 4 Food, available in the Turtle Pack. Feeding a pet Bread will give them the Bread perk. At the end of turn, a pet with the Bread perk will gain +7 Health until next turn.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Bread"
+  },
+  {
+    "name": "Canned Food",
+    "tier": 4,
+    "gold_cost": 3,
+    "gold_cost_note": null,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack",
+      "Puppy Pack"
+    ],
+    "effect": "Give all current and future shop pets +1 Attack and +1 Health.",
+    "summary": "Canned Food is a Tier 4 Food, available in the Turtle Pack and the Puppy Pack. When bought, instead of giving stats to pets currently on the team, it gives permanent +1 Attack and +1 Health to all current and future shop pets.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Canned_Food"
+  },
+  {
+    "name": "Pear",
+    "tier": 4,
+    "gold_cost": 3,
+    "gold_cost_note": null,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "effect": "Give one pet +2 Attack and +2 Health.",
+    "summary": "The Pear is a Tier 4 Food, available in the Turtle Pack. Feeding a Pet a Pear increases its stats by +2 attack and +2 health permanently. Essentially, it's a better Apple but a worse Lasagna/Chicken Leg.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Pear"
+  },
+  {
+    "name": "Chili",
+    "tier": 5,
+    "gold_cost": 3,
+    "gold_cost_note": null,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "effect": "Give one pet the Chili perk. Attack second enemy for 5 damage.",
+    "summary": "Chili is a Tier 5 Food, available in the Turtle Pack. Feeding a pet a Chili will give that pet the Chili perk. Every time a pet with Chili perk attacks, it will deal an additional 5 damage to the pet in second space of the enemy's team. If there are no enemies in that space, Chili will not deal damage.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Chili"
+  },
+  {
+    "name": "Chocolate",
+    "tier": 5,
+    "gold_cost": 3,
+    "gold_cost_note": null,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack",
+      "Golden Pack",
+      "Puppy Pack"
+    ],
+    "effect": "Give one pet +1 Experience.",
+    "summary": "The Chocolate is a Tier 5 Food that can be found in Any pack. When Chocolate is given to a pet, it will receive +1 Experience. Similar to when combining duplicate copies, each Chocolate/experience will also add +1 Attack and +1 Health. In Custom and Weekly pack, Crow can stock Chocolate upon being sold, and at higher levels will stock Better Chocolate and Best Chocolate that give +2 and +3 experiences respectively.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Chocolate"
+  },
+  {
+    "name": "Sushi",
+    "tier": 5,
+    "gold_cost": 3,
+    "gold_cost_note": null,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "effect": "Give three random pets +1 Attack and +1 Health.",
+    "summary": "The Sushi is a Tier 5 Food, available in the Turtle Pack. Buying a Sushi gives 3 random pets +1/+1. If there is only 1 or 2 pet(s) on the team then they gain with +1/+1 with the other 1 or 2 buff(s) being wasted.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Sushi"
+  },
+  {
+    "name": "Melon",
+    "tier": 6,
+    "gold_cost": 3,
+    "gold_cost_note": null,
+    "wiki_id": null,
+    "packs": [
+      "Puppy Pack",
+      "Turtle Pack"
+    ],
+    "effect": "Give one pet the Melon perk. Take 20 less damage, once.",
+    "summary": "The Melon is a Tier 6 Food, available in the Turtle Pack and the Puppy Pack. Feeding a Pet a Melon gives that pet the Melon perk. The first time a pet with Melon perk takes damage, the damage is reduced by 20, to a minimum of 0.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Melon"
+  },
+  {
+    "name": "Mushroom",
+    "tier": 6,
+    "gold_cost": 3,
+    "gold_cost_note": null,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "effect": "Give one pet the Mushroom perk. Come back as a 1/1 after fainting.",
+    "summary": "Mushroom is a Tier 6 Food, available in the Turtle Pack. Feeding a pet a Mushroom gives that pet the Mushroom perk. When a pet with the Mushroom perk faints, it summons a 1/1 copy of itself at the same level. Summoned copies are considered \"new\" pets, with almost no memory of their old selves before they faint. For example if a Parrot faints and comes back, it will not keep the copied abilities. However, Mushroom does remember the amount of ability triggers the pet has spent.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Mushroom"
+  },
+  {
+    "name": "Pizza",
+    "tier": 6,
+    "gold_cost": 3,
+    "gold_cost_note": null,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "effect": "Give two random pets +2 Attack and +2 Health.",
+    "summary": "The Pizza is a Tier 6 Food, available in the Turtle Pack. Buying a Pizza gives two random pets +2 attack and +2 health permanently. The Pizza can be considered as a direct upgrade to the Salad Bowl, as it gives twice the stats of it.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Pizza"
+  },
+  {
+    "name": "Steak",
+    "tier": 6,
+    "gold_cost": 3,
+    "gold_cost_note": null,
+    "wiki_id": null,
+    "packs": [
+      "Turtle Pack"
+    ],
+    "effect": "Give one pet the Steak perk. Attack with +20 damage, once.",
+    "summary": "The Steak is a Tier 6 Food, available in the Turtle Pack and the Puppy Pack. Feed a pet a Steak wil give that pet the Steak perk. The first time a pet with Steak perk attacks, it will deal an additional 20 damage.",
+    "source_url": "https://superautopets.wiki.gg/wiki/Steak"
+  }
+]
