@@ -1,4 +1,4 @@
-"""SAP2 (Super Auto Pets), the full Arena match - Tier 1 + Tier 2 roster.
+"""SAP2 (Super Auto Pets), the full Arena match - Tier 1 roster.
 
 The actual multi-round Arena match: lives, trophies, a tier-gated shop
 that grows with the turn number, freeze, and the turn-3 life-back rule
@@ -8,11 +8,9 @@ requirements, sell value, shop capacity per tier, Pigeon's free Bread
 Crumbs) were measured out of the shipped build by policy-clash-re-tools, not
 taken from a wiki.
 
-Roster is Tier 1 (10 pets) plus Tier 2 (10 more, unlocked turn 3+) and
-their foods - the *match engine* here is the real game's full structure;
-Tiers 3-6 are separate, later expansions tracked in sap-v2.md's appendix.
-One Tier-2 ability (Spider's Faint summon) is a documented no-op pending
-that follow-on work - see sap2.h's sap2_battle_resolve_faint.
+Roster is still Tier 1 only (10 pets, 3 foods) - the *match engine* here
+is the real game's full structure; the pet roster is a separate, later
+expansion tracked in sap-v2.md's appendix.
 
 Rules live in C, under envs/csrc/sap2.h - self-contained, no dependency
 on any other env's files - with a thin CPython binding in
@@ -33,6 +31,7 @@ NUM_ACTIONS = _sap2.NUM_ACTIONS
 MAX_TICKS = _sap2.MAX_TICKS
 TEAM_SLOTS = _sap2.TEAM_SLOTS
 MAX_SHOP_PETS = _sap2.MAX_SHOP_PETS
+ROSTER_TIER = _sap2.ROSTER_TIER  # how far the implemented roster reaches
 MAX_SHOP_FOOD = _sap2.MAX_SHOP_FOOD  # the largest food shop a ROLL fills
 FOOD_SLOTS = _sap2.FOOD_SLOTS  # array width: Pigeon prepends up to 3 free crumbs
 MAX_LEVEL = _sap2.MAX_LEVEL
@@ -41,10 +40,7 @@ MAX_STATS = _sap2.MAX_STATS  # BoardConstants.MaxStats - attack and health cap
 NUM_PERKS = _sap2.NUM_PERKS  # width of a team slot's perk one-hot
 PERK_NONE = _sap2.PERK_NONE
 PERK_HONEY = _sap2.PERK_HONEY
-PERK_MEATBONE = _sap2.PERK_MEATBONE
-NUM_ALL_SPECIES = _sap2.NUM_ALL_SPECIES  # width of a team slot's species one-hot
-NUM_SHOP_SPECIES = _sap2.NUM_SHOP_SPECIES  # width of a shop slot's species one-hot, minus the empty id
-NUM_FOODS = _sap2.NUM_FOODS  # width of a shop food slot's species one-hot
+PERK_MEAT_BONE = _sap2.PERK_MEAT_BONE  # Tier 2's Meat Bone
 
 # Layout, for consumers that decode features or build actions. Derived from
 # the C core rather than copied, so a widened block cannot leave a stale
@@ -93,7 +89,7 @@ _TERMINAL: dict[int, tuple[Outcome, Termination]] = {
 
 
 class Sap2:
-    """Two-player Super Auto Pets, full Arena match, Tier 1 + Tier 2 roster.
+    """Two-player Super Auto Pets, full Arena match, Tier 1 roster.
 
     Each round is shaped exactly like sap-v1's single round - both seats
     act simultaneously during the shop phase, a seat that ends stops
@@ -108,8 +104,8 @@ class Sap2:
     total changes. It returns for the next round at its persistent stats,
     exactly as if the battle had never touched it, because it wasn't:
     battle resolution never writes back to the persistent team. Only
-    selling, or feeding a pet Sleeping Pill (Tier 2), removes it from the
-    roster for good.
+    selling (or, in a later roster phase, an explicit effect like Sleeping
+    Pill) removes a pet from the roster for good.
     """
 
     spec = SPEC

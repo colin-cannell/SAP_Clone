@@ -220,6 +220,7 @@ PyMODINIT_FUNC PyInit__sap2(void) {
         PyModule_AddIntConstant(module, "MAX_TICKS", SAP2_MAX_TICKS) < 0 ||
         PyModule_AddIntConstant(module, "TEAM_SLOTS", SAP2_TEAM) < 0 ||
         PyModule_AddIntConstant(module, "MAX_SHOP_PETS", SAP2_MAX_SHOP_PETS) < 0 ||
+        PyModule_AddIntConstant(module, "ROSTER_TIER", SAP2_ROSTER_TIER) < 0 ||
         PyModule_AddIntConstant(module, "MAX_SHOP_FOOD", SAP2_MAX_SHOP_FOOD) < 0 ||
         PyModule_AddIntConstant(module, "FOOD_SLOTS", SAP2_FOOD_SLOTS) < 0 ||
         /* Slot widths and action bases, so that layout-aware consumers
@@ -242,15 +243,7 @@ PyMODINIT_FUNC PyInit__sap2(void) {
         PyModule_AddIntConstant(module, "NUM_PERKS", SAP2_NUM_PERKS) < 0 ||
         PyModule_AddIntConstant(module, "PERK_NONE", SAP2_PERK_NONE) < 0 ||
         PyModule_AddIntConstant(module, "PERK_HONEY", SAP2_PERK_HONEY) < 0 ||
-        PyModule_AddIntConstant(module, "PERK_MEATBONE", SAP2_PERK_MEATBONE) < 0 ||
-        /* Species/food counts, same reasoning as the slot widths above -
-         * a roster phase that adds species or foods widens these, and a
-         * hardcoded copy anywhere else is exactly the kind of stale
-         * constant that produces a nonsense test failure instead of a
-         * loud one. */
-        PyModule_AddIntConstant(module, "NUM_ALL_SPECIES", SAP2_NUM_ALL_SPECIES) < 0 ||
-        PyModule_AddIntConstant(module, "NUM_SHOP_SPECIES", SAP2_NUM_SHOP_SPECIES) < 0 ||
-        PyModule_AddIntConstant(module, "NUM_FOODS", SAP2_NUM_FOODS) < 0 ||
+        PyModule_AddIntConstant(module, "PERK_MEAT_BONE", SAP2_PERK_MEAT_BONE) < 0 ||
         PyModule_AddIntConstant(module, "STARTING_GOLD", SAP2_STARTING_GOLD) < 0 ||
         PyModule_AddIntConstant(module, "STARTING_LIVES", SAP2_STARTING_LIVES) < 0 ||
         PyModule_AddIntConstant(module, "TROPHIES_TO_WIN", SAP2_TROPHIES_TO_WIN) < 0 ||

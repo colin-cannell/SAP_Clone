@@ -72,14 +72,12 @@ from policyclash_envs.sap2 import (  # noqa: E402 - after the rich imports on pu
     ACT_REROLL,
     ACT_SELL_BASE,
     FOOD_SLOTS,
-    MAX_LEVEL,
     MAX_SHOP_PETS,
+    MAX_LEVEL,
     NUM_ACTIONS,
-    NUM_ALL_SPECIES,
-    NUM_FOODS,
     NUM_PERKS,
-    NUM_SHOP_SPECIES,
     PERK_HONEY,
+    PERK_MEAT_BONE,
     PERK_NONE,
     SHOP_FOOD_SLOT_FLOATS,
     SHOP_PET_SLOT_FLOATS,
@@ -88,21 +86,17 @@ from policyclash_envs.sap2 import (  # noqa: E402 - after the rich imports on pu
 )
 
 TEAM_BASE = 4  # after gold(1) lives(1) trophies(1) turn(1)
-# NUM_ALL_SPECIES-wide species one-hot, attack, health, 3 level one-hot,
-# exp, NUM_PERKS-wide perk one-hot.
+# species one-hot, attack, health, level one-hot, exp, perk one-hot - every
+# width derived, because the species block has grown twice (10 pets, then
+# Tier 2's ten plus a third token) and the food block gained a price.
 TEAM_SLOT_WIDTH = TEAM_SLOT_FLOATS
-TEAM_ATK_OFF = NUM_ALL_SPECIES
-TEAM_HP_OFF = TEAM_ATK_OFF + 1
-TEAM_LEVEL_OFF = TEAM_HP_OFF + 1
-TEAM_EXP_OFF = TEAM_LEVEL_OFF + MAX_LEVEL
-TEAM_PERK_OFF = TEAM_EXP_OFF + 1
+NUM_SPECIES = TEAM_SLOT_FLOATS - (2 + MAX_LEVEL + 1 + NUM_PERKS)
 SHOP_PET_BASE = TEAM_BASE + TEAM_SLOTS * TEAM_SLOT_WIDTH
 SHOP_PET_SLOT_WIDTH = SHOP_PET_SLOT_FLOATS
-SHOP_PET_HP_BONUS_OFF = NUM_SHOP_SPECIES + 1
-SHOP_PET_FROZEN_OFF = SHOP_PET_HP_BONUS_OFF + 1
+NUM_SHOP_SPECIES_ONEHOT = SHOP_PET_SLOT_FLOATS - 2
 SHOP_FOOD_BASE = SHOP_PET_BASE + MAX_SHOP_PETS * SHOP_PET_SLOT_WIDTH
 SHOP_FOOD_SLOT_WIDTH = SHOP_FOOD_SLOT_FLOATS
-SHOP_FOOD_FROZEN_OFF = NUM_FOODS
+NUM_FOODS_ONEHOT = SHOP_FOOD_SLOT_FLOATS - 2
 
 SPECIES_NAME = {
     0: "-", 1: "Ant", 2: "Beaver", 3: "Cricket", 4: "Duck", 5: "Fish",
@@ -116,17 +110,14 @@ SPECIES_EMOJI = {
     6: "🐴", 7: "🦟", 8: "🦦", 9: "🐖", 10: "🕊",
     11: "🦀", 12: "🦩", 13: "🦔", 14: "🦘", 15: "🦚",
     16: "🐀", 17: "🐌", 18: "🕷", 19: "🦢", 20: "🪱",
-    21: "🦗", 22: "🐝", 23: "🐀",
+    21: "🦗", 22: "🐝", 23: "🐁",
 }
 FOOD_NAME = {
-    0: "-", 1: "Apple", 2: "Honey", 3: "Bread Crumbs",
-    4: "Meat Bone", 5: "Muffin", 6: "Sleeping Pill",
-    7: "Better Apple", 8: "Best Apple", 9: "Apple (2g)",
+    0: "-", 1: "Apple", 2: "Honey", 3: "Meat Bone", 4: "Muffin", 5: "Pill",
+    6: "Bread Crumbs",
 }
-FOOD_EMOJI = {
-    0: " ", 1: "🍎", 2: "🍯", 3: "🥖",
-    4: "🦴", 5: "🧁", 6: "💊", 7: "🍏", 8: "🍏", 9: "🍎",
-}
+FOOD_EMOJI = {0: " ", 1: "🍎", 2: "🍯", 3: "🦴", 4: "🧁", 5: "💊", 6: "🥖"}
+PERK_EMOJI = {PERK_NONE: "", PERK_HONEY: "🍯", PERK_MEAT_BONE: "🦴"}
 
 PAIRS = [(i, j) for i in range(5) for j in range(i + 1, 5)]
 
@@ -173,21 +164,24 @@ def decode_team(f: np.ndarray) -> list[dict]:
     out = []
     for t in range(5):
         base = TEAM_BASE + t * TEAM_SLOT_WIDTH
-        species = int(np.argmax(f[base : base + NUM_ALL_SPECIES]))
-        level_base = base + TEAM_LEVEL_OFF
-        level = int(np.argmax(f[level_base : level_base + MAX_LEVEL])) + 1 if species else 0
-        perk_base = base + TEAM_PERK_OFF
+        species = int(np.argmax(f[base : base + NUM_SPECIES]))
+        lvl_base = base + NUM_SPECIES + 2
+        level = int(np.argmax(f[lvl_base : lvl_base + MAX_LEVEL])) + 1 if species else 0
         out.append(
             {
                 "species": species,
                 # atk/hp are the totals sap2.h's accessors report, so a
                 # Horse buff that expires next turn shows here while it
                 # is live - same number the game's card shows.
-                "atk": int(f[base + TEAM_ATK_OFF]),
-                "hp": int(f[base + TEAM_HP_OFF]),
+                "atk": int(f[base + NUM_SPECIES]),
+                "hp": int(f[base + NUM_SPECIES + 1]),
                 "level": level,
-                "exp": int(f[base + TEAM_EXP_OFF]),
-                "perk": int(np.argmax(f[perk_base : perk_base + NUM_PERKS])) if species else PERK_NONE,
+                "exp": int(f[lvl_base + MAX_LEVEL]),
+                "perk": (
+                    int(np.argmax(f[lvl_base + MAX_LEVEL + 1 : lvl_base + MAX_LEVEL + 1 + NUM_PERKS]))
+                    if species
+                    else PERK_NONE
+                ),
             }
         )
     return out
@@ -199,9 +193,9 @@ def decode_shop_pets(f: np.ndarray, pet_slots: int) -> list[dict]:
         base = SHOP_PET_BASE + k * SHOP_PET_SLOT_WIDTH
         out.append(
             {
-                "species": int(np.argmax(f[base : base + NUM_SHOP_SPECIES + 1])),
-                "hp_bonus": int(f[base + SHOP_PET_HP_BONUS_OFF]),
-                "frozen": bool(f[base + SHOP_PET_FROZEN_OFF]),
+                "species": int(np.argmax(f[base : base + NUM_SHOP_SPECIES_ONEHOT])),
+                "hp_bonus": int(f[base + NUM_SHOP_SPECIES_ONEHOT]),
+                "frozen": bool(f[base + NUM_SHOP_SPECIES_ONEHOT + 1]),
                 "active": k < pet_slots,
             }
         )
@@ -216,11 +210,15 @@ def decode_shop_food(f: np.ndarray, food_slots: int) -> list[dict]:
     out = []
     for k in range(FOOD_SLOTS):
         base = SHOP_FOOD_BASE + k * SHOP_FOOD_SLOT_WIDTH
-        species = int(np.argmax(f[base : base + NUM_FOODS]))
+        species = int(np.argmax(f[base : base + NUM_FOODS_ONEHOT]))
         out.append(
             {
                 "species": species,
-                "frozen": bool(f[base + SHOP_FOOD_FROZEN_OFF]),
+                "frozen": bool(f[base + NUM_FOODS_ONEHOT]),
+                # The price is per slot: a Worm stocks a 2-gold Apple and
+                # Pigeon's crumbs are free, so the species does not say
+                # what a slot costs.
+                "price": int(f[base + NUM_FOODS_ONEHOT + 1]),
                 "active": k < food_slots or species != 0,
             }
         )
@@ -242,14 +240,14 @@ def choose_action(rng: random.Random, legal: np.ndarray, style: str) -> int:
     legal_idx = [i for i, ok in enumerate(legal) if ok]
     if style == "random":
         return rng.choice(legal_idx)
-    buys = [a for a in legal_idx if ACT_BUY_PET_BASE <= a < ACT_SELL_BASE]
-    combos = [a for a in legal_idx if ACT_COMBINE_BASE <= a < ACT_REROLL]
+    buys = [a for a in legal_idx if 1 <= a < 6]
+    combos = [a for a in legal_idx if 11 <= a < 21]
     if buys and rng.random() < 0.7:
         return rng.choice(buys)
     if combos and rng.random() < 0.5:
         return rng.choice(combos)
-    if ACT_REROLL in legal_idx and rng.random() < 0.3:
-        return ACT_REROLL
+    if 21 in legal_idx and rng.random() < 0.3:
+        return 21
     return 0
 
 
@@ -297,6 +295,7 @@ def shop_food_line(f: dict) -> Text:
     name = FOOD_NAME[f["species"]]
     t = Text(f"{FOOD_EMOJI[f['species']]} ")
     t.append(name, style="bold")
+    t.append(f" {f['price']}g", style="yellow")
     if f["frozen"]:
         t.append(" ❄", style="blue")
     return t
