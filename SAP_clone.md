@@ -97,9 +97,26 @@ Following the same philosophy as the fire-survival game: get a minimal but *comp
 
 **Status: steps 1–4 done.** [`docs/envs/sap-v1.md`](docs/envs/sap-v1.md) is
 the full design spec (action/observation encoding, step-limit derivation,
-battle-trigger ordering) and `policy-clash/envs/csrc/sap.h` (local
-checkout, branch `sap-v1-env`, uncommitted) is the implementation —
-registered as `sap-v1`, 19 passing tests. Next up is step 5.
+battle-trigger ordering) and `policy-clash/envs/csrc/sap.h` is the
+implementation — registered as `sap-v1`, 19 passing tests.
+
+**Step 5, multi-round meta-progression: also done, as `sap2-v1`.**
+[`docs/envs/sap-v2.md`](docs/envs/sap-v2.md) — the full Arena match (lives,
+trophies, tier-gated growing shop, freeze), still Tier 1 roster, 13 passing
+tests, plus a 500-match random-play fuzz run with zero crashes. Caught and
+corrected a real wrong inference along the way, worth restating here since
+it's easy to get wrong again: **fainting in battle is not permanent** — a
+defeat costs one life, not the pet; a fainted pet is back at full health
+next round. Tiers 2–6 (the pet-roster expansion) remain open, tracked in
+sap-v2.md's appendix.
+
+**Both envs are upstreamed**: [pjsny/policy-clash#1](https://github.com/pjsny/policy-clash/pull/1),
+open against the real repo (forked to `colin-cannell/policy-clash`, branch
+`sap-v1-env`), not just sitting locally.
+
+**A real-match visualizer**, `tools/visualize_sap2.py`: a terminal tool
+that runs an actual `sap2-v1` match through the real C engine (not a
+reimplementation) and renders team/shop/lives/trophies round by round.
 
 **Training, added since:** `training/` has a working self-play PPO loop
 against the policy-clash env directly (validated: 95%+ win rate vs. a

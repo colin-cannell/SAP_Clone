@@ -315,7 +315,8 @@ problem in this env is in the adapter or the policy, never in `sap.h`.
   simultaneous-move reference this spec follows the shape of.
 - `policy-clash/envs/csrc/sap.h` — the rules core implementing this spec.
   Local checkout at `policy-clash/` (sibling of this doc's own repo root),
-  branch `sap-v1-env`, uncommitted — nothing pushed anywhere.
+  branch `sap-v1-env`, upstreamed at
+  [pjsny/policy-clash#1](https://github.com/pjsny/policy-clash/pull/1).
 - `policy-clash/envs/csrc/sap_binding.c` — the CPython binding. Exports
   status codes and shape constants (`OBS_FLOATS`, `NUM_ACTIONS`,
   `MAX_TICKS`, ...) so the adapter hardcodes none of the numbers above,
