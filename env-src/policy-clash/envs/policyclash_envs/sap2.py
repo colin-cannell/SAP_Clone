@@ -11,9 +11,8 @@ taken from a wiki.
 Roster is Tier 1 (10 pets) plus Tier 2 (10 more, unlocked turn 3+) and
 their foods - the *match engine* here is the real game's full structure;
 Tiers 3-6 are separate, later expansions tracked in sap-v2.md's appendix.
-One Tier-2 ability (Spider's Faint summon) and one Tier-2 species'
-battle-phase ability (Hedgehog's) are documented no-ops pending that
-follow-on work - see sap2.h's sap2_battle_resolve_faint.
+One Tier-2 ability (Spider's Faint summon) is a documented no-op pending
+that follow-on work - see sap2.h's sap2_battle_resolve_faint.
 
 Rules live in C, under envs/csrc/sap2.h - self-contained, no dependency
 on any other env's files - with a thin CPython binding in

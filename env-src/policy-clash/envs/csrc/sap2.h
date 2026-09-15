@@ -14,10 +14,10 @@
  * and shipping the engine and the full roster unverified in one pass
  * risks exactly the kind of bug a smaller, single-round build of this
  * same engine caught repeatedly during development, at a sixth of this
- * scope - see sap-v2.md for that history. Two Tier-2 abilities are
- * documented no-ops for now (Spider's Faint summon, Hedgehog's Faint
- * damage) - see sap2_battle_resolve_faint's own comments for exactly
- * why and what unblocks each.
+ * scope - see sap-v2.md for that history. One Tier-2 ability is a
+ * documented no-op for now (Spider's Faint summon, blocked on a Tier-3
+ * roster that doesn't exist yet) - see sap2_battle_resolve_faint's own
+ * comment on it.
  *
  * Self-contained: its own species/food tables, its own RNG, its own
  * battle resolution - not built on top of another file, so it can be
@@ -1109,20 +1109,15 @@ static inline void sap2_battle_insert_front(SapBattle2 *b, int side, uint8_t spe
     }
 }
 
-/* NOT implemented here, and deliberately so: Hedgehog's own Faint ability
- * ("deal 2/4/6 damage to ALL pets", both sides, measured via
- * policy-clash-re-tools' battle.py - a single Hedgehog's splash confirmed
- * to scale 2/4/6 by level and to land on the enemy dummy in a controlled
- * one-on-one). What blocks it isn't the damage - it's that splash damage
- * can itself faint pets ANYWHERE on either board, including outside the
- * front position every call site here assumes, and those faints need
- * their own on-faint resolution (possibly cascading into another
- * Hedgehog). That needs a real "resolve every pet currently at <=0 health,
- * anywhere, recursively" pass, not a species case bolted onto a function
- * whose only two call sites both assume idx 0. Hedgehog is fully buyable/
- * sellable/combinable (shop parity is intact - see SAP2_BASE_ATK/HP and
- * sap2_roll_shop), it just currently faints with no special effect, same
- * documented-gap treatment as Spider below. */
+/* Hedgehog's Faint damage can drop pets anywhere on either board -
+ * outside the front position every call site into this function
+ * otherwise ever passes - so it only APPLIES the damage here; it does
+ * not resolve anyone it newly kills itself. sap2_battle's main loop
+ * calls sap2_battle_resolve_pending_faints right after every call into
+ * this function, which sweeps the whole board for anyone left at <=0
+ * health (Hedgehog's splash, or a chain into another Hedgehog) and
+ * resolves each one through this same function - so a species case here
+ * never needs to know whether it just triggered a cascade. */
 static inline void sap2_battle_resolve_faint(SapBattle2 *b, uint64_t *rng, int side, int idx) {
     const uint8_t species = b->species[side][idx];
     const uint8_t level = b->level[side][idx];
@@ -1195,6 +1190,22 @@ static inline void sap2_battle_resolve_faint(SapBattle2 *b, uint64_t *rng, int s
          * treatment as sap-v1's Fish level_1 row. Spider itself is fully
          * buyable/sellable/combinable and just faints with no special
          * effect until Tier 3 lands. */
+    } else if (species == SAP2_HEDGEHOG) {
+        /* Deal 2/4/6 (by level) damage to every OTHER pet on both boards -
+         * measured via policy-clash-re-tools' battle.py (a controlled 1v1:
+         * a level-1/2 Hedgehog's splash dealt exactly 2/4 extra damage to
+         * a 50-health dummy on top of the front-line exchange). Applying
+         * it here, not resolving it: see this function's own header
+         * comment and sap2_battle_resolve_pending_faints. */
+        const int8_t dmg = (int8_t)(2 * level);
+        for (int sd = 0; sd < 2; sd++) {
+            for (int i = 0; i < b->count[sd]; i++) {
+                if (sd == side && i == idx) {
+                    continue; /* self - already fainting, about to be removed below */
+                }
+                b->health[sd][i] = (int8_t)(b->health[sd][i] - dmg);
+            }
+        }
     }
 
     if (perk == SAP2_PERK_HONEY) {
@@ -1204,6 +1215,32 @@ static inline void sap2_battle_resolve_faint(SapBattle2 *b, uint64_t *rng, int s
     }
 
     sap2_battle_remove(b, side, idx);
+}
+
+/* Cleans up whatever a just-resolved Faint effect left behind: Hedgehog's
+ * splash (or, in the future, another cross-position effect like it) can
+ * drop a pet anywhere on either board to <=0 health, not just the front
+ * position sap2_battle's main loop itself watches. Repeatedly finds the
+ * first such pet and resolves it through the SAME sap2_battle_resolve_faint
+ * every other faint goes through - including a chain into another
+ * Hedgehog - until none are left. Order across different newly-dead pets
+ * is not an independently measured rule (unlike the front-line tie-break
+ * sap2_battle's caller already applies); it is a resolvable pass over a
+ * board of at most 10 pets, so it terminates either way. */
+static inline void sap2_battle_resolve_pending_faints(SapBattle2 *b, uint64_t *rng) {
+    int again = 1;
+    while (again) {
+        again = 0;
+        for (int side = 0; side < 2 && !again; side++) {
+            for (int i = 0; i < b->count[side]; i++) {
+                if (b->health[side][i] <= 0) {
+                    sap2_battle_resolve_faint(b, rng, side, i);
+                    again = 1;
+                    break;
+                }
+            }
+        }
+    }
 }
 
 /* Start-of-battle abilities are QUEUED, then resolved.
@@ -1461,6 +1498,18 @@ static inline int sap2_battle(SAP2 *env) {
         } else {
             sap2_battle_resolve_faint(&b, &env->battle_rng, 1, 0);
         }
+
+        /* Splash damage (Hedgehog) can drop pets OUTSIDE the front
+         * position this loop otherwise ever touches - anywhere on either
+         * board, including a chain into another Hedgehog. Those aren't
+         * covered by the two calls above (which only ever resolve
+         * whichever pet(s) were AT the front this exchange, in the
+         * measured attack-order tie-break), so sweep for anyone else
+         * left at <=0 health and resolve them too. This can never
+         * double-resolve the two front-line faints just handled above:
+         * they are already removed from the array by the time this
+         * runs. */
+        sap2_battle_resolve_pending_faints(&b, &env->battle_rng);
     }
 
     if (b.count[0] > 0 && b.count[1] == 0) {
