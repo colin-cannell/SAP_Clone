@@ -1,12 +1,16 @@
 # External upstream clones - not vendored here. Each is a full separate git
 # checkout of someone else's project, with our work-in-progress patches
 # sitting uncommitted inside it. Reproduce them with:
-#   git clone https://github.com/pjsny/policy-clash.git && cd policy-clash && git checkout -b sap-v1-env
+#   git clone https://github.com/pjsny/policy-clash.git
 #   git clone --branch 4.0 https://github.com/PufferAI/PufferLib.git pufferlib
+#   git clone https://github.com/pjsny/policy-clash-re-tools.git
 # then copy the matching files from env-src/ over the checkout (see
-# env-src/README.md) to reapply our changes.
+# env-src/README.md) to reapply our changes. policy-clash-re-tools has
+# none to reapply - it's a read-only oracle harness against the shipped
+# game, not something this project patches.
 /policy-clash/
 /pufferlib/
+/policy-clash-re-tools/
 
 # Training run artifacts - reproducible outputs, not source.
 /training/checkpoints/*.pt
