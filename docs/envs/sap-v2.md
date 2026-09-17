@@ -212,27 +212,177 @@ ticks/sec through the Python adapter (10.1 µs/tick) — roughly half
 ## Appendix: roster rollout plan
 
 1. **Tier 1 — done.** Match engine + existing 10 pets/2 foods, fully
-   tested (13 tests, `envs/tests/test_sap2.py`) — the actual deliverable
-   of this pass.
-2. **Tier 2** (Snail, Crab, Swan, Rat, Hedgehog, Peacock, Flamingo, Worm,
-   Kangaroo, Spider + Cupcake, Meat Bone, Sleeping Pill): next phase.
-   Introduces the `Hurt` trigger for the first time (Peacock).
-3. **Tier 3** (Dodo, Badger, Dolphin, Giraffe, Elephant, Camel, Rabbit,
-   Ox, Dog, Sheep + Cake\*, Salad Bowl, Garlic): introduces
-   `FriendAheadFaints`/`FriendAheadAttacks`-style positional triggers
-   (Camel, Giraffe, Ox) not in `sap-v1`'s taxonomy at all yet. \*Cake is
-   confirmed **not** currently in Turtle Pack per `data/turtle_pack`'s own
-   scrape notes — Salad Bowl and Garlic only.
-4. **Tier 4** (Skunk, Hippo, Bison, Blowfish, Turtle, Squirrel, Penguin,
-   Deer, Whale, Parrot + Pear, Canned Food, Bread): introduces `KnockOut`
-   (Hippo) and permanent shop-wide buffs (Canned Food).
-5. **Tier 5** (Scorpion, Crocodile, Rhino, Monkey, Armadillo, Cow, Seal,
-   Rooster, Shark, Turkey + Sushi, Chocolate, Chili): introduces
-   `FriendFainted` (Shark) and Chocolate's direct-XP-no-merge leveling.
-6. **Tier 6** (Leopard, Boar, Tiger, Wolverine, Gorilla, Dragon, Mammoth,
-   Cat, Snake, Fly + Pizza, Mushroom, Melon, Steak): introduces
-   `BeforeAttack`/`AfterAttack` (Boar, Elephant already tier 3 — Boar is
-   the tier-6 case) and `Fly`'s bounded-trigger-count ability.
+   tested (`envs/tests/test_sap2.py`) — the actual deliverable of this
+   pass.
+2. **Tier 2 — done.** Snail, Crab, Swan, Rat, Hedgehog, Peacock, Flamingo,
+   Worm, Kangaroo, Spider + Meat Bone, Muffin, Sleeping Pill. Introduced
+   the `Hurt` trigger for the first time (Peacock). Roster caps at
+   `SAP2_ROSTER_TIER`, `sap2.h`.
+3. **Tier 3 — done.** Dodo, Badger, Dolphin, Giraffe, Elephant, Camel,
+   Rabbit, Ox, Dog, Sheep + Salad Bowl, Garlic (Cake confirmed **not**
+   currently in Turtle Pack per `data/turtle_pack`'s own scrape notes, so
+   just the two). Introduced `AfterAttack` (Elephant — pulled forward from
+   the Tier 6 estimate below once it turned out Elephant needed it, not
+   Boar), plus three new trigger/selector shapes the taxonomy didn't have
+   before: `EatFood` (Rabbit), `FriendAheadFainted` (Ox), and a
+   cross-team-adjacency target for a faint-time effect (Badger — falls
+   back to the enemy's front pet when there's no ally ahead of it).
+   Also closed a hole Tier 2 shipped with on purpose: Spider's Faint
+   ability, which summons a random Tier-3 pet and had nothing to summon
+   until now (`sap2_random_tier3_species`). Not independently measured
+   against the shipped build the way Tier 1/2 were — no runtime access to
+   the game client from this environment — so every ability row here is
+   sourced from `data/turtle_pack/pets.json`'s scrape text instead, called
+   out at each spot in `sap2.h` where that distinction actually mattered
+   (rounding, a repeated effect's re-targeting, a full-team summon with
+   nowhere to put the second body). 7 new tests in
+   `envs/tests/test_sap2.py`, plus a 3000-match random-legal-play smoke
+   run (zero crashes; all ten Tier-3 species and the new Ram token
+   observed reaching a team) and a throughput remeasurement: ~58,600
+   ticks/sec through the Python adapter (random-legal-play, 500 matches),
+   down from Tier 1's ~99,000 — expected, not a regression to chase: the
+   observation buffer widened (24→35 species, 9→11 foods, 3→5 perks) and
+   there are more ability rows to scan per trigger fired.
+4. **Tier 4 — done.** Skunk, Blowfish, Bison, Deer, Hippo, Parrot, Penguin,
+   Squirrel, Turtle, Whale + Pear, Canned Food, Bread. Introduced `KnockOut`
+   (`SAP2_TRIG_KILL` — declared with Tier 1/2's original trigger set,
+   never fired until now: Hippo is its first user, scoped to the basic
+   front-vs-front exchange only, not ability damage, per that trigger's
+   own original comment), a standing shop-wide buff (Canned Food —
+   `SapSeat2.canned_food_bonus`, applied to current AND future shop pets),
+   and this roster's first ability-COPYING pet (Parrot — `copy_species` on
+   `SapPet2`/`SapBattle2`, substituted in at the one point both
+   `sap2_fire` and `sap2_battle_fire` look up a species' ability row, so
+   every other pet's dispatch needed no changes at all). Whale's
+   swallow/release (store a swallowed ally's stats, summon them back at
+   Whale's own level when Whale itself faints) is hardcoded rather than a
+   declarative row — the amounts are per-body captured state, not a
+   constant off the ability table, the same reason Meat Bone/Garlic/Melon/
+   Chili's damage-time hooks aren't declarative either. Pulled two more
+   perks forward from later tiers the same way Tier 3 pulled Melon forward
+   for Ox: Chili (Tier 5 — Deer's Bus token carries it) and, this time,
+   Bread's own perk shipped AS declarative (an End-Turn self-buff,
+   `SAP2_PERK_ABILITY`'s first non-Honey row, fired generically by both
+   `sap2_fire`/`sap2_battle_fire` alongside a pet's species row rather
+   than needing its own pipeline hook). Also caught and fixed, in this
+   pass: `SAP2_ROSTER_TIER`'s own comment had been claiming Tier 4 unlocks
+   at turn 9 since Tier 3 — `sap2_tier_for_turn`'s actual table says turn
+   7; the code was always right, only the prose was stale. Same sourcing
+   caveat as Tier 3: data/turtle_pack's scrape, not independently
+   re-measured. 8 new tests (`envs/tests/test_sap2.py`), a 3000-match
+   random-legal-play smoke run (zero crashes; every Tier-4 species and the
+   Bus token observed reaching a team), and a throughput remeasurement:
+   ~57,900 ticks/sec — essentially flat against Tier 3's ~58,600 despite
+   the roster widening again (35→46 species, 11→14 foods, 5→7 perks),
+   which is the more interesting result than the raw number: the dispatch
+   changes this tier needed (species substitution, a virtual perk-ability
+   slot) cost close to nothing at runtime.
+5. **Tier 5 — done.** Scorpion, Crocodile, Rhino, Monkey, Armadillo, Cow,
+   Seal, Rooster, Shark, Turkey + Sushi, Chocolate, Chili (the perk itself
+   already shipped with Tier 4, for Deer's Bus — this is its first food
+   source). Hippogriff excluded: a "secret" fusion pet (Horse + Eagle),
+   and Eagle exists nowhere in this 61-item scrape at any tier, so fusion
+   has no precondition it could ever satisfy here — see the species enum's
+   comment. Two more trigger families: `SelfSummoned` (Scorpion — fires
+   directly on the ARRIVING pet, unlike every earlier arrival-reaction
+   trigger, which fans out to watchers and structurally excludes the
+   arrival itself) and `FriendFainted` (Shark — any team-mate anywhere,
+   broader than Tier 3's single-neighbor `FriendAheadFainted`). Rhino's
+   Knock-Out chain ("triggers again" on a kill) is a bounded loop inside
+   its own selector case, not recursion. Cow's `REPLACE_SHOP_FOOD` is a
+   new effect shape (clears the food shop rather than prepending to it)
+   and needed a whole new food family (Milk/Better Milk/Best Milk,
+   asymmetric +atk/+hp, never rolled) since it doesn't fit the existing
+   flat-symmetric-buff table any rolled food so far has used. Peanut
+   (Scorpion) is new and, like Chili, has no food anywhere in the scrape —
+   Scorpion's own ability is its only source in this roster, permanently.
+   Same sourcing caveat as Tier 3/4: data/turtle_pack's scrape, not
+   independently re-measured. 9 new tests (`envs/tests/test_sap2.py`),
+   a 3000-match random-legal-play smoke run (zero crashes; every Tier-5
+   species and the Chick token observed reaching a team), and a
+   throughput remeasurement: ~22,000-29,000 ticks/sec (down from Tier 4's
+   ~57,900, more than the roster-widening alone explains for the first
+   time) — investigated, not just reported: shop-phase tick counts per
+   match are unchanged (~76,900, matching Tier 4's own count almost
+   exactly), so the slower wall-clock is going into battle resolution
+   itself, not more shop ticks. The most likely explanation is a real
+   consequence of a materially stronger roster, not a bug: Tier 5 adds
+   Armadillo's mass heal and Cow's free stat food, both of which help
+   random-legal play field bigger, tankier teams, and a bigger team fights
+   more EXCHANGES per battle even when the match takes the same number of
+   shop actions. Not fully isolated from a possible per-exchange
+   regression (the new Peanut/Chili/Knock-Out checks each battle exchange
+   now runs) for lack of a clean way to A/B the two without reverting -
+   flagged here rather than left unmentioned.
+6. **Tier 6 — done.** Leopard, Boar, Tiger, Wolverine, Gorilla, Dragon,
+   Mammoth, Cat, Snake, Fly + Pizza, Mushroom, Melon, Steak — the roster's
+   last tier. Melon's perk already shipped with Tier 3 (Ox) and was reused
+   by Tier 4's Turtle; the food item granting it is new this tier. Two new
+   trigger families: `BeforeAttack` (Boar — fires before the exchange
+   loop's own damage is computed, so a self-buff here changes that same
+   exchange, not just the next one; `AfterAttack` itself already shipped
+   with Tier 3, for Elephant) and `Tier1FriendBought` (Dragon — narrower
+   than the existing "any buy" trigger, checked against
+   `SAP2_SPECIES_TIER` at the one call site that already knows what was
+   bought). A new selector, `SEL_ALL_FRIENDS` (Mammoth's Faint — every
+   occupied slot on the firer's own side, both shop and battle halves).
+   Cat, Tiger and Wolverine are deliberately NOT table-driven abilities —
+   none is a per-pet reactive trigger the way everything else in this
+   roster is:
+   - **Cat** is a passive multiplier read directly off the team by
+     `sap2_buy_food`'s own `cat_mult`, applied to every other food's stat
+     amount (capped at 2 procs/turn, per the scrape).
+   - **Wolverine** watches a running count of Hurt events across its own
+     side (`sap2_battle_note_hurt`, mutually recursive with
+     `sap2_battle_damage`), not any single pet's own trigger.
+   - **Tiger** — the tier's largest new mechanic — repeats whatever
+     ability the friend directly ahead of it just fired, at Tiger's own
+     level, "without depleting additional triggers" per the scrape.
+     Implemented as a self re-entrant call at the bottom of
+     `sap2_battle_fire` (not a wrapper around its ~20 call sites): a
+     `tiger_repeat` flag on `Sap2BattleCtx` stops the synthetic re-fire
+     from chaining through a second Tiger, and the original ability's
+     `max_per_turn` use (if any) is restored after the repeat so it costs
+     exactly one trigger, matching the scrape's own worked example (Fly
+     summons 2 Zombie Flies off one Faint, spending only 1 of its 3
+     per-turn uses). DEATH is a special case: it fires with the body's
+     position already gone, so whether a Tiger was standing behind the
+     dying pet is captured *before* removal (`Sap2BattleCtx.dying_tiger_level`,
+     the same "capture before clearing" shape `trigger_attack` used for
+     Rooster in Tier 5) rather than read live the way every other trigger
+     reads it.
+   Also fixed, caught during this pass rather than reported by a test
+   failure: `sap2_buy_food`'s `fed[2]` array had been sized for Salad
+   Bowl's 2 recipients since Tier 3 and silently overflowed by one entry
+   on every Sushi purchase since Tier 5 shipped Sushi's 3 recipients —
+   widened to `fed[3]`.
+   Same sourcing caveat as Tier 3/4/5: `data/turtle_pack`'s scrape, not
+   independently re-measured against the shipped build. Two disclosed gaps:
+   Mushroom's revival is hardcoded (a fresh 1/1 of the same species/level,
+   no perk) but does NOT implement the scrape's own "remembers its ability's
+   trigger counts" detail — a revived pet's `max_per_turn` counters reset
+   like any other fresh body, not measured to matter for this roster's
+   actual abilities; and Leopard/Boar/Snake/Wolverine/Tiger's mechanics are
+   all battle-only (three of them also need a specific board adjacency, not
+   just a specific species), so — same as every battle-only mechanic in
+   Tiers 3-5 — they have no lever in the public action API for a
+   deterministic test here and are covered only by the smoke run below and
+   code review, not a dedicated test. 7 new tests
+   (`envs/tests/test_sap2.py`), a 3000-match random-legal-play smoke run
+   (zero crashes; every Tier-6 species and the new Zombie Fly token
+   observed reaching a team), and a throughput remeasurement: ~57,000
+   ticks/sec (three repeated 500-match runs, all within 56,700-57,500,
+   76,992 ticks each — the shop-tick count is exactly what Tier 5's own
+   note already established), essentially back to Tier 3/4's level and a
+   large recovery from Tier 5's own last-measured 22,000-29,000. Not fully
+   explained: ticks/match and the dispatch-per-exchange cost both stayed
+   flat or grew slightly this tier, so nothing found here accounts for
+   *why* Tier 5's number was so much lower — the more likely explanation is
+   session-to-session measurement noise (machine load at the time, not
+   this tier's own code) given Tier 5's own figure was already reported as
+   a wide, unstable range, but this was not independently isolated by
+   reverting Tier 5's changes to compare directly, so it is flagged rather
+   than asserted.
 
 Each phase: port abilities from `data/turtle_pack/pets.json`, extend the
 trigger taxonomy only as far as that tier's roster actually needs (same
